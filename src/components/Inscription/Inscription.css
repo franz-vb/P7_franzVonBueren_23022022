@@ -1,0 +1,82 @@
+.container_modal{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   position: fixed; 
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 10;
+}
+
+.form_inscription {
+    padding: 40px;
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    color: black;
+}
+
+.container_form {
+    width: 100%;
+}
+
+.header_inscritpion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 200;
+    font-size: .8rem;
+}
+
+.exit {
+    padding: 5px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(44, 151, 44);
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.container_inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input_inscription {
+    width: 47%;
+    height: 40px;
+}
+
+.email_inscription {
+    width: 99%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.btn_inscription {
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(44, 151, 44);
+    color: white;
+    font-size: 1.5rem;
+}

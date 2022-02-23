@@ -1,0 +1,25 @@
+.container_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_header{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.title_header{
+    color: orangered;
+    font-size: 40px;
+    margin: 50px;
+    margin-top: 10px;
+}
+
+.under_title_header{
+    width: 400px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
