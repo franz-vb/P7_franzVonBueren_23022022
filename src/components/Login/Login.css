@@ -32,8 +32,10 @@
 .button_login{
     width: 100%;
     background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    height: 30px;
     color: white;
-    
 }
 
 .password_login{
