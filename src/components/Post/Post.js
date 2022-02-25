@@ -13,7 +13,15 @@ function Post(props) {
     const [addMessage, setAddMessage] = useState('');
     
     function handleClick() {
-        props.setPosts([...props.posts, addMessage])/*on récupère le Tab créer dans Forum pour y ajouter un objet/publication*/
+
+        if (addMessage.length < 200) {
+            props.setError('');
+            props.setPosts([...props.posts, {message: addMessage, pseudo: "franz", date: new Date().toDateString(), time: Date.now()}])/*on récupère le Tab créer dans Forum pour y ajouter un objet/publication*/
+            setAddMessage('');
+        }
+        else {
+            props.setError('Votre message doit faire moins de 200 caractères');
+        }
     } 
 
     return (

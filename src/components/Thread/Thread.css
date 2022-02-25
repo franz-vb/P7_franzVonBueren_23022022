@@ -8,10 +8,32 @@
 
 .containerThread{
     display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 200px ;
     box-shadow: 0 5px 20px rgba(141, 141, 141, 0.69);
     border-radius: 20px;
     padding: 10px;
     margin-top: 10px;
+}
+
+.headerThread {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.containerPseudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.threadMessage {
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: left;
+    word-wrap: break-word;
 }
