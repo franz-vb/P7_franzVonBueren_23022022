@@ -26,7 +26,7 @@ function Thread(props) {
                         <div className='headerThread'>
                             <MdAccountCircle className='iconCenter'/>
                             <div className='containerPseudo'>
-                                <div>{post.pseudo}</div>
+                                <div className='pseudoThread'>{post.pseudo}</div>
                                 <div style={{fontSize: "0.7rem"}}>{post.date}</div>
                             </div>
                         </div>

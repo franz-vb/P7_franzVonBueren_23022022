@@ -1,4 +1,7 @@
+/* LIBRAIRIES */ 
 import React, { useState } from 'react'
+
+/* CSS */
 import './Inscription.css'
 
 function Inscription(props) {

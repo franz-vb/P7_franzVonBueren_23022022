@@ -15,9 +15,10 @@
 .form_inscription {
     padding: 40px;
     width: 600px;
-    height: 300px;
+    height: 380px;
     background-color: white;
     color: black;
+    border: 1px solid red
 }
 
 .container_form {

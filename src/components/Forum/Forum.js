@@ -14,7 +14,7 @@ function Forum() {
     const [error, setError] = useState('');
 
     return (
-        <div className='containerForum'>
+        <div className='containerForum'> 
             
             <Post posts={posts} setPosts={setPosts} setError={setError}/>
             {

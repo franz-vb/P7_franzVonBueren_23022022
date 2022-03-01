@@ -14,7 +14,7 @@ function Post(props) {
     
     function handleClick() {
 
-        if (addMessage.length < 200) {
+        if (addMessage.length < 200) { 
             props.setError('');
             props.setPosts([...props.posts, {message: addMessage, pseudo: "franz", date: new Date().toDateString(), time: Date.now()}])/*on récupère le Tab créer dans Forum pour y ajouter un objet/publication*/
             setAddMessage('');
@@ -36,9 +36,10 @@ function Post(props) {
                         value={addMessage} 
                         onChange={(e) => setAddMessage(e.target.value)} />
             </div> 
+            {/*si il y un mot, le boutton Poster apparait */}
             {
                 addMessage.length > 0 &&
-                <button onClick={handleClick}>Poster</button>
+                <button className='buttonPost' onClick={handleClick}>Poster</button>
             }  
         </div>
   )

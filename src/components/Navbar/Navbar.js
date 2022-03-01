@@ -10,6 +10,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { AiFillMessage } from 'react-icons/ai';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { AiTwotoneBell } from 'react-icons/ai';
+import { FiLogOut } from 'react-icons/fi';
 
 /* CSS */ 
 import './Navbar.css';
@@ -27,6 +28,9 @@ const Navbar = () => {
             </div>
             <div className='navbarSettings'>
                 <div className='containerIconSettings'>
+                    <img src='' alt=''/>
+                </div>
+                <div className='containerIconSettings'>
                     <AiFillMessage className='iconSettings'/>
                 </div>
                 <div className='containerIconSettings'>
@@ -34,7 +38,12 @@ const Navbar = () => {
                 </div>
                 <div className='containerIconSettings'>
                     <AiFillCaretDown className='iconSettings'/>
-                </div>               
+                </div>
+                <Link to='/'>
+                    <div className='containerLogout'>
+                        <FiLogOut className='iconLogout'/>
+                    </div>
+                </Link>
             </div>
 
         </div>

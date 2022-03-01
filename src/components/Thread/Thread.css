@@ -37,3 +37,9 @@
     text-align: left;
     word-wrap: break-word;
 }
+
+.pseudoThread{
+    font-weight: 700;
+    font-size: 1.4em;
+    color: orangered;
+}
