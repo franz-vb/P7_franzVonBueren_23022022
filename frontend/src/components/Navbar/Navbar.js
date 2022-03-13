@@ -1,6 +1,6 @@
 /* LIBRAIRIES */ 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 /* IMAGES */
 import Logo from '../../Images/icon.png';
@@ -16,6 +16,10 @@ import { FiLogOut } from 'react-icons/fi';
 import './Navbar.css';
 
 const Navbar = () => {
+
+    function handleClickLogout() {
+        localStorage.clear();
+    }
 
     return (
         <div className='containerNavbar'>
@@ -40,10 +44,11 @@ const Navbar = () => {
                     <AiFillCaretDown className='iconSettings'/>
                 </div>
                 <Link to='/'>
-                    <div className='containerLogout'>
+                    <div className='containerLogout' onClick={handleClickLogout}>
                         <FiLogOut className='iconLogout'/>
                     </div>
                 </Link>
+        
             </div>
 
         </div>
