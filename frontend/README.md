@@ -15,27 +15,34 @@ Prérequis :
 Il vous faut avoir installé sur votre machine :
 
 Git : https://git-scm.com/downloads
+
 Node.js : https://nodejs.org/en/
+
 MySql : https://dev.mysql.com/downloads/installer/
 
 Créer un dossier vide puis cloner ce repository à l'intérieur :
+
 git clone https://github.com/franz-vb/P7_franzVonBueren_23022022.git
 
 ### MySQL
 
 Dans le fichier groupomania/backend/.env ,mettre le mot de passe d'accès à votre base de donnée et votre nom d'utilisateur si besoin (root par défaut)
+
 DB_USER=root
+
 DB_PASS=
 
 Ouvrir MySql command Line client puis effectuer ces deux lignes de commandes :
 
 CREATE DATABASE groupomania;
+
 USE groupomania;
 ### BACK END
 
 Ouvrir un terminal dans le dossier backend puis effectuer les lignes de commandes suivantes :
 
 npm install
+
 nodemon server.js
 
 ### FRONT END
@@ -43,7 +50,9 @@ nodemon server.js
 Ouvrir un autre terminal dans le dossier frontend puis effectuer les lignes de commandes suivantes :
 
 npm install
+
 npm run start
+
 Ouvrir le navigateur a l'adresse http://localhost:3000/
 
 ## Fonctionnalités :
@@ -59,6 +68,7 @@ Un compte admin est présent pour la modération (suppression des posts et comme
 Voici les codes d'accès admin :
 
 admin@admin.admin
+
 adminF
 
 Bonne visite !
