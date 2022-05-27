@@ -1,5 +1,5 @@
 /* LIBRAIRIES */ 
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 /* PAGES */ 
@@ -13,7 +13,9 @@ import PrivateRouteAccueil from './components/PrivateRoute/PrivateRouteAccueil';
 /* CSS */ 
 import './App.css';
 
+
 function App() {
+    
     return (
         <div className="App">
             <BrowserRouter>

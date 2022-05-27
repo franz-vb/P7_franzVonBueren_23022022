@@ -25,12 +25,13 @@ const Login = (props) => {
                     body: JSON.stringify({
                         email: email,
                         password: password
-                    }),
+                    })
                 })
                 .then(response => response.json())
                 .then(data => {
-
+                    
                     if (data.success === 1) {
+                        localStorage.setItem('user', JSON.stringify([data.id, data.pseudo]));
                         localStorage.setItem('token', data.token);
                         navigate('/accueil');   
                     }
@@ -44,7 +45,7 @@ const Login = (props) => {
             <div className='container_login'>
                 <form className='form_login' onSubmit={handleSubmit}>
                     <input className='input_login' type='text' placeholder='Adresse mail' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <input className='input_login' type='text' placeholder='Mot de passe' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input className='input_login' type='password' placeholder='Mot de passe' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <button className='button_login'>SE CONNECTER</button>
                     <div className='password_login'>Mot de passe oublié?</div>
                     <div className='create_login' onClick={() => props.setIsModalOpen(true)}>Créer un compte</div>

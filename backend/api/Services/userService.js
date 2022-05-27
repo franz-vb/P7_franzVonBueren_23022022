@@ -1,4 +1,4 @@
-const pool = require('../config/database');
+const pool = require('../../config/database');
 
 exports.create = (data, callback) => {
     pool.query(`INSERT INTO utilisateurs(pseudo, email, password)
@@ -6,13 +6,17 @@ exports.create = (data, callback) => {
         [
             data.pseudo, 
             data.email, 
-            data.password, 
+            data.password,
         ],
         (error, results, fields) => {
             if (error) { 
                 return callback(error)
             }
-            return callback(null, results)
+
+            let result = {
+                id: results.insertId
+            }
+            return callback(null, result)
         }
     )
 }
@@ -52,11 +56,14 @@ exports.getUserById = (id, callback) => {
 }
 
 exports.updateUser = (data, callback) => {
-    pool.query(`UPDATE utilisateurs SET pseudo = ?, email = ?, password = ? WHERE id = ?`,
+
+    pool.query(`UPDATE utilisateurs SET pseudo = ? WHERE id = ?; UPDATE posts SET pseudo = ? WHERE idUser = ?; UPDATE comments SET pseudo = ? WHERE userId = ?`,
     [
         data.pseudo, 
-        data.email, 
-        data.password, 
+        data.id,
+        data.pseudo, 
+        data.id,  
+        data.pseudo, 
         data.id
     ],
     (error, results, fields) => {
@@ -67,10 +74,13 @@ exports.updateUser = (data, callback) => {
         return callback(null, results[0])
     })
 }
+/*; DELETE FROM comments WHERE userId = ?; DELETE FROM likes WHERE userId = ? , data.userId, data.userId */ 
 
 exports.deleteUser = (data, callBack) => {
-    pool.query(`DELETE FROM utilisateurs WHERE id = ?`,
-    [data], 
+
+    let newPseudo = data.pseudo + "(Utilisateur supprimé)";
+    pool.query(`DELETE FROM utilisateurs WHERE id = ?; DELETE FROM posts WHERE idUser = ?; UPDATE comments SET pseudo = ? WHERE userId = ?`,
+    [data.userId, data.userId, newPseudo, data.userId], 
     (error, results, fields) => {
         if (error) {
             return callBack(error);
@@ -78,3 +88,16 @@ exports.deleteUser = (data, callBack) => {
         return callBack(null, results)
     })
 }
+
+/* exports.countLikesComments = (data, callBack) => {
+    pool.query(`SELECT COUNT(*) as nbrLikes FROM likes WHERE userID = ?; SELECT COUNT(*) as nbrComments FROM comments WHERE userId = ?; SELECT likes FROM posts WHERE ID = ?; SELECT comments FROM posts WHERE ID = ?`,
+    [data, data],
+    (error, results, fields) => {
+        if (error) {
+            return callBack(error);
+        }
+    
+        return callBack(null, results)
+    })
+} */
+

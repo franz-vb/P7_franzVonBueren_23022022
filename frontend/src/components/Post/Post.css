@@ -1,8 +1,7 @@
-
 .containerCenter {
     display: flex;
     width: 40%;
-    height: 70px;
+    min-height: 70px;
     box-shadow: 0 5px 20px rgba(141, 141, 141, 0.69);
     border-radius: 20px;
     padding: 10px;
@@ -36,4 +35,8 @@
     border: white;
     background-color: orangered;
     color: white
+}
+
+.inputFile {
+    margin-top: 10px;
 }

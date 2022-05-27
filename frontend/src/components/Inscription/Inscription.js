@@ -20,17 +20,13 @@ function Inscription(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        setPseudo('');
-        setEmail('');
-        setPassword('');
-        setConfirmation('');
+
         const regexEmail = /^([a-z0-9.\-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         const regexPassword = /^[^\s][a-zA-ZÀ-ÖØ-öø-ÿ\s-]+[^\s]$/;
 
         if (!regexEmail.test(email)) {
             setErrorEmail("L'email n'est pas valide");
             } else {
-                console.log('test1');
                 setErrorEmail('');
                 if (!regexPassword.test(password)) {
                     setErrorPassword("Le mot de passe n'est pas valide");
@@ -51,6 +47,13 @@ function Inscription(props) {
                         })
                         .then(response => response.json())
                         .then(data => {
+                            console.log(data)
+                            localStorage.setItem('user', JSON.stringify([data.data.id, pseudo]));
+                            setPseudo('');
+                            setEmail('');
+                            setPassword('');
+                            setConfirmation('');
+                            props.setIsModalOpen(false);
                             localStorage.setItem("token", data.token);
                             navigate('/accueil');
                         })
@@ -59,10 +62,8 @@ function Inscription(props) {
                     } else {
                         setErrorConfirmation("password and confirmation are different")
                     } 
-            
                 }
-            }
-              
+            }  
     }
 
   return (
@@ -87,7 +88,7 @@ function Inscription(props) {
                     <input className='input_inscription' placeholder='Confirmation' type="password" onChange={(e) => setConfirmation(e.target.value)}/>
                 </div>
                 {
-                    errorPassword && <div style={{color: 'red'}}>{errorPassword}</div>
+                    errorPassword.length > 0 && <div style={{color: 'red'}}>{errorPassword}</div>
                 }
                 {
                     errorConfirmation && <div style={{color: 'red'}}>{errorConfirmation}</div>

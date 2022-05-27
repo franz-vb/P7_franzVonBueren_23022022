@@ -103,3 +103,68 @@
     border: 2px solid orangered;
     cursor: pointer;
 }
+
+.modalMenuSettings {
+    position: absolute;
+    top: 90px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+    height: 220px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(194, 194, 194, 0.69);
+    background: rgb(174, 174, 174);
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.settingsRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.NZ {
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-decoration: none; 
+}
+
+.settingsRow:hover {
+    background-color: white;
+    color: rgb(174, 174, 174);
+}
+
+.settingsRS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+}
+
+.iconRS {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.iconRS:hover {
+    background-color: white;
+    color: rgb(174, 174, 174);
+}
+

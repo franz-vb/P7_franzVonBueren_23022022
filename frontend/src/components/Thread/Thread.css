@@ -7,6 +7,7 @@
 }
 
 .containerThread{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -39,8 +40,68 @@
     word-wrap: break-word;
 }
 
+.deletePost {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid orangered;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .pseudoThread{
     font-weight: 700;
     font-size: 1.4em;
     color: orangered;
 }
+
+.jaimeThread, .commentairesThread {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+}
+
+.containerLikesComments {
+    /* position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid gray; */
+}
+
+.headerLikesComments {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: 10px; 
+    margin-top: 50px;
+    padding-top: 20px;   
+    border-top: 1px solid gray;
+}
+
+.postImage {
+    height: 500px;
+    object-fit: cover;
+    border: 5px solid gray;
+    border-radius: 15px;
+}
+
+/* .containerCommentaires {
+    background-color: rgba(128, 128, 128, 0.2);
+} */

@@ -18,7 +18,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     <div>
        <Header /> 
        <Login setIsModalOpen={setIsModalOpen} />
-        {/*si isModalOpen is true alors envoi Inscription*/ }
         { isModalOpen &&
            <Inscription setIsModalOpen={setIsModalOpen}/>
         }

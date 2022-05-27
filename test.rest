@@ -1,0 +1,29 @@
+POST http://localhost:3000/api/users/createUser
+Content-Type: application/json
+
+{"email":"abc","password":"abc","pseudo":"abc"}
+###
+http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjcyfSwiaWF0IjoxNjUzMDU2MzgxLCJleHAiOjE2NTMwNTk5ODF9.fkdwkv73J65JN6O5S7tCLiKHwmKFhV2ueIPuEhZHoW4
+###
+DELETE http://localhost:3000/api/users/deleteUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjY0LCJlbWFpbCI6ImFkbWluQGFkbWluLmFkbWluIiwicHNldWRvIjoiYWRtaW5GIiwiZ3JvdXBlIjoiYWRtaW4ifSwiaWF0IjoxNjUzMDU3MDMyLCJleHAiOjE2NTMwNjA2MzJ9.kS9BGxLdJnWr1uNS1VTlBM4s_LzYxDlncRAe0qJdoKw
+Content-Type: application/json
+
+{"userId": 73}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{"email":"admin@admin.admin","password":"adminF","pseudo":"abc"}
+###
+http://localhost:3000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjcyfSwiaWF0IjoxNjUzMDU2MzgxLCJleHAiOjE2NTMwNTk5ODF9.fkdwkv73J65JN6O5S7tCLiKHwmKFhV2ueIPuEhZHoW4
+
+###
+DELETE http://localhost:3000/api/posts/deletePost
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjc0fSwiaWF0IjoxNjUzMDU3OTIxLCJleHAiOjE2NTMwNjE1MjF9.wuaUTGbnCDAa_h48xdLIQ7ATXPN6wgMD6oXaNMOoXeM
+Content-Type: application/json
+
+{"postId": 31}
