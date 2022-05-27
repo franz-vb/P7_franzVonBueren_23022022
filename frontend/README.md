@@ -24,19 +24,6 @@ Créer un dossier vide puis cloner ce repository à l'intérieur :
 
 git clone https://github.com/franz-vb/P7_franzVonBueren_23022022.git
 
-### MySQL
-
-Dans le fichier groupomania/backend/.env ,mettre le mot de passe d'accès à votre base de donnée et votre nom d'utilisateur si besoin (root par défaut)
-
-DB_USER=root
-
-DB_PASS=
-
-Ouvrir MySql command Line client puis effectuer ces deux lignes de commandes :
-
-CREATE DATABASE groupomania;
-
-USE groupomania;
 ### BACK END
 
 Ouvrir un terminal dans le dossier backend puis effectuer les lignes de commandes suivantes :
@@ -59,16 +46,12 @@ Ouvrir le navigateur a l'adresse http://localhost:3000/
 
 Le site permet de
 
+- Créer un compte et se connecter
 - Partager des posts (avec ou sans photos)
 - Commenter et liker des posts
 - Personnaliser son profil (changement de pseudo)
 - Modifier et supprimer son compte
 
 Un compte admin est présent pour la modération (suppression des posts et commentaires d'autres utilisateurs).
-Voici les codes d'accès admin :
-
-admin@admin.admin
-
-adminF
 
 Bonne visite !
